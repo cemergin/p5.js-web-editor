@@ -1,21 +1,19 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import Backend from 'i18next-http-backend';
-
 import {
   enUS,
   es,
   ja,
   hi,
-  it,
-  ko,
   ptBR,
   de,
   frCA,
   zhCN,
   zhTW,
   uk,
-  sv
+  sv,
+  tr
 } from 'date-fns/locale';
 
 const fallbackLng = ['en-US'];
@@ -25,14 +23,13 @@ const availableLanguages = [
   'es-419',
   'fr-CA',
   'hi',
-  'it',
   'ja',
-  'ko',
   'pt-BR',
   'sv',
   'uk-UA',
   'zh-CN',
-  'zh-TW'
+  'zh-TW',
+  'tr'
 ];
 
 export function languageKeyToLabel(lang) {
@@ -42,14 +39,13 @@ export function languageKeyToLabel(lang) {
     'es-419': 'Español',
     'fr-CA': 'Français',
     hi: 'हिन्दी',
-    it: 'Italiano',
     ja: '日本語',
-    ko: '한국어',
     'pt-BR': 'Português',
     sv: 'Svenska',
     'uk-UA': 'Українська',
     'zh-CN': '简体中文',
-    'zh-TW': '正體中文'
+    'zh-TW': '正體中文',
+    tr: 'Türkçe'
   };
   return languageMap[lang];
 }
@@ -61,14 +57,13 @@ export function languageKeyToDateLocale(lang) {
     'es-419': es,
     'fr-CA': frCA,
     hi,
-    it,
     ja,
-    ko,
     'pt-BR': ptBR,
     sv,
     'uk-UA': uk,
     'zh-CN': zhCN,
-    'zh-TW': zhTW
+    'zh-TW': zhTW,
+    tr
   };
   return languageMap[lang];
 }
